@@ -75,18 +75,57 @@ body{
 	margin-top: 15px;
 }
 
-h2#top-questions{
+#tab-header{
 	border-bottom: 1px solid #cccccc;
 	padding-bottom: 5px;
+}
+
+#tabs{
+	float: right;
+	vertical-align: bottom;
+	line-height: 24px;
+}
+
+#tabs a{
+	text-decoration: none;
+	margin-left: 10px;
+	margin-right: 15px;
+}
+
+#tabs a.active{
+	border: 1px solid #cccccc;
+	border-bottom: 1px solid #fff;
+	padding: 5px 5px 8px 5px;
+}
+
+#tabs a.active:hover{
+	border: 1px solid #cccccc;
+	border-bottom: 1px solid #fff;
+	padding: 5px 5px 8px 5px;
+	margin-right: 15px;
+	margin-left: 10px;
+}
+
+#tabs a:hover{
+	border: 1px solid #cccccc;
+	border-bottom: 1px solid #fff;
+	padding: 1px 5px 8px 5px;
+	margin-left: 4px;
+	margin-right: 9px;
+}
+
+h2#top-questions{
+	float: left;
+	line-height: 24px;
 }
 
 .question-top-block
 {
 	border-bottom: 1px solid #cccccc;
-	padding: 20px 15px;
+	padding: 10px 15px;
 }
 
-.vote,.answer,.view{
+.vote,.answer,.view,.answer-not-zero,.view-not-zero{
 	float: left;
 	text-align: center;
 	font-family: sans-serif;
@@ -101,7 +140,14 @@ h2#top-questions{
 	clear: both;
 }
 
-.answer,.view{
+.time-ago{
+	color:#999999;
+	font-family: sans-serif;
+	font-size: 12px;
+	margin-right: 3px;
+}
+
+.answer,.view,.answer-not-zero{
 	margin-left: 15px;
 }
 
@@ -113,7 +159,17 @@ h2#top-questions{
 	color:#c36c44;
 }
 
-.view{
+.answer-not-zero{
+	background: #75845c;
+	color: #fff;
+	padding: 5px;
+}
+
+.view-not-zero{
+	margin-left: 8px;
+}
+
+.view,.view-not-zero{
 	color:#999999;
 }
 
@@ -178,8 +234,8 @@ h2#top-questions{
 	width: 200px;
 	padding: 5px 20px;
 
-	position:fixed;
-	margin-left: 720px;
+	/*position:fixed;
+	margin-left: 720px;*/
 }
 
 #hot-question-box{
@@ -201,8 +257,18 @@ h2#top-questions{
 	font-size: 14px;
 }
 
+.hot-question-title a{
+	text-decoration: none;
+	color: #0077d5;
+}
+
+.hot-question-title a:hover{
+	text-decoration: underline;
+}
+
 .hot-question-point{
 	float: left;
+	color:#999999;
 }
 
 .empty-hot-question-title{
@@ -211,4 +277,33 @@ h2#top-questions{
 
 .hot-question-container{
 	margin-bottom: 10px;
+}
+
+#footer{
+	background: #777777;
+	clear: both;
+	border-top: 10px solid black;
+	color: #fff;
+	font-family: sans-serif;
+}
+
+#footer-container{
+	margin: 0 auto;
+	width: 960px;
+	padding: 20px 0px;
+}
+
+#footer td{
+	padding-right: 60px;
+}
+
+#footer th{
+	text-align: left;
+	padding-bottom: 20px;
+	color: #cccccc;
+}
+
+#footer p{
+	margin-top: 40px;
+	color: #cccccc;
 }
