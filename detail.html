@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question Detail</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="header">
+		<div id="header-content">
+			<div id="header-left">
+				<a href="" id="project-name">Mitra QnA</a>
+
+				<div id="search-box">
+					<input type="text" placeholder="Search..." />
+				</div>
+			</div>
+
+			<div id="header-right">
+				<span id="header-menu-home">Home</span>
+				<span id="header-menu-user">User</span>
+				<input id="btn-add-question" type="button" value="Add Question"/>
+			</div>
+
+			<div id="header-empty">
+			</div>
+
+		</div>
+	</div>
+
+	<div id="container">
+
+		<h2 id="question-title">How to loop inside a while loop</h2>
+		
+		<div id="content">
+			
+			<div id="question-container">
+
+				<div class="vote-container">
+					<div class="arrow-up"></div>
+					<div class="vote">5</div>
+					<div class="arrow-down"></div>
+				</div>
+
+				<div class="question">
+					<p>I am trying to loop through $vars_array['selected_ids'] array and insert the selected_id and page_id. It is inserting 3 records (as expected), but each record is getting a selected_id of 7.. i.e. the last selected value inserted.</p>
+
+					<pre>
+					$vars_array=array();
+					$vars_array['page_id']=10;
+					$vars_array['selected_ids']=array(2,3,7);
+
+					$sql = "INSERT INTO template_values ( page_id, selected_id) VALUES";
+					$sqlPart = array_fill(0, count($vars_array['selected']), "(?, ?)");
+					$sql .=  implode(",",$sqlPart);
+					$stmt=$this->database->prepare($sql);
+
+					$i = 1;
+					foreach($vars_array['selected_ids'] as $selected_id) {
+					    $stmt -> bindParam($i++, $vars_array['page_id']);
+					    $stmt -> bindParam($i++, $selected_id);
+					}
+					$stmt -> execute();
+					</pre>
+
+					<p>Any ideas?</p>
+
+					<div class="tag-container">
+						<a href="" class="tag">php</a>
+						<a href="" class="tag">laravel</a>
+					</div>
+
+					<div class="author-question">
+						<div>Asked 4 hours ago</div>
+						<div><a href="" class="author">blinkawan</a></div>
+						<div>500</div>
+					</div>
+				</div>
+
+				<div style="clear:both"></div>
+
+			</div>
+
+			<div id="answer-container">
+				<h2>3 Answers</h2>
+				<div class="the-answer">
+					<div class="vote-container">
+						<div class="arrow-up"></div>
+						<div class="vote">5</div>
+						<div class="arrow-down"></div>
+					</div>
+
+					<div class="question">
+						<p>I will say this, while writting the custom membership provider is going to take a little time, the benefits will far outweight the time it will take because it saves so much other coding. Plus it leaves open the option for converting to the built-in .Net membership provider latter on. If I do want to switch later, all I have to do is change the web.config settings, install the support tables in my DB and covert current users into the new set of tables. I shouldn't have to touch any of my code to complete the conversion which is cool!!!</p>
+
+						<div class="author-question">
+							<div>Asked 4 hours ago</div>
+							<div><a href="" class="author">blinkawan</a></div>
+							<div>500</div>
+						</div>
+					</div>
+
+					<div style="clear:both"></div>
+				</div>
+
+				<div class="the-answer">
+					<div class="vote-container">
+						<div class="arrow-up"></div>
+						<div class="vote">5</div>
+						<div class="arrow-down"></div>
+					</div>
+
+					<div class="question">
+						<p>I will say this, while writting the custom membership provider is going to take a little time, the benefits will far outweight the time it will take because it saves so much other coding. Plus it leaves open the option for converting to the built-in .Net membership provider latter on. If I do want to switch later, all I have to do is change the web.config settings, install the support tables in my DB and covert current users into the new set of tables. I shouldn't have to touch any of my code to complete the conversion which is cool!!!</p>
+
+						<div class="author-question">
+							<div>Asked 4 hours ago</div>
+							<div><a href="" class="author">blinkawan</a></div>
+							<div>500</div>
+						</div>
+					</div>
+
+					<div style="clear:both"></div>
+				</div>
+
+				<div class="the-answer">
+					<div class="vote-container">
+						<div class="arrow-up"></div>
+						<div class="vote">5</div>
+						<div class="arrow-down"></div>
+					</div>
+
+					<div class="question">
+						<p>I will say this, while writting the custom membership provider is going to take a little time, the benefits will far outweight the time it will take because it saves so much other coding. Plus it leaves open the option for converting to the built-in .Net membership provider latter on. If I do want to switch later, all I have to do is change the web.config settings, install the support tables in my DB and covert current users into the new set of tables. I shouldn't have to touch any of my code to complete the conversion which is cool!!!</p>
+
+						<div class="author-question">
+							<div>Asked 4 hours ago</div>
+							<div><a href="" class="author">blinkawan</a></div>
+							<div>500</div>
+						</div>
+					</div>
+
+					<div style="clear:both"></div>
+				</div>
+			</div>
+			
+		</div>
+
+		<div id="sidebar">
+
+
+			<div id="hot-question-box">
+				<p id="title-hot">Hot Questions</p>
+
+				<div class="hot-question-container">
+					<div class="hot-question-point">25</div>
+					<div class="hot-question-title"><a href="">Is it OK to flag my own question because I want someone to answer it?</a></div>
+					<div class="empty-hot-question-title"></div>
+				</div>
+
+				<div class="hot-question-container">
+					<div class="hot-question-point">25</div>
+					<div class="hot-question-title"><a href="">Disallow languages other than English in chat</a></div>
+					<div class="empty-hot-question-title"></div>
+				</div>
+
+				<div class="hot-question-container">
+					<div class="hot-question-point">25</div>
+					<div class="hot-question-title"><a href="">How does foreach work</a></div>
+					<div class="empty-hot-question-title"></div>
+				</div>
+
+			</div>
+
+
+		</div>
+
+	</div>
+
+	<div id="footer">
+		<div id="footer-container">
+
+			<table>
+				<tr>
+					<th colspan="3">Technology</th>
+					<th>Arts</th>
+					<th>Science</th>
+				</tr>
+				<tr>
+					<td>.NET</td>
+					<td>Java</td>
+					<td>PHP</td>
+					<td>Photography</td>
+					<td>Mathematics</td>
+				</tr>
+				<tr>
+					<td>AngularJs</td>
+					<td>JavaScript</td>
+					<td>Ruby</td>
+					<td>Painting</td>
+					<td>Biology</td>
+				</tr>
+				<tr>
+					<td>Ruby on Rails</td>
+					<td>HTML 5</td>
+					<td>CSS 3</td>
+					<td>Sculpting</td>
+					<td>Chemistry</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>Android</td>
+					<td></td>
+					<td></td>
+					<td>Physics</td>
+				</tr>
+			</table>
+
+			<p>Agung Setiawan 2014</p>
+		</div>
+	</div>
+</body>
+</html>

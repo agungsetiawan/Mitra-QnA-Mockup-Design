@@ -307,3 +307,82 @@ h2#top-questions{
 	margin-top: 40px;
 	color: #cccccc;
 }
+
+/* detail.html */
+
+h2#question-title{
+	border-bottom: 1px solid #cccccc;
+	padding-bottom: 5px;
+	margin-bottom: 20px; 
+}
+
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	
+	border-bottom: 15px solid #818185;
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	
+	border-top: 15px solid #818185;
+
+	margin-top: 33px;
+}
+
+.vote{
+	margin: 5px 0px 0px 8px;
+	font-size: 24px;
+}
+
+.vote-container{
+
+}
+
+.question{
+	width: 670px;
+	margin-left: 10px;
+}
+
+.vote-container,.question{
+	float: left;
+}
+
+.question p{
+	text-align: justify;
+	font-family: sans-serif;
+	margin-bottom: 20px;
+}
+
+.question pre{
+	background: #eeeeee;
+	margin-bottom: 20px;
+	white-space: pre-line;
+	padding: 5px;
+}
+
+.question .author-question{
+	background: #e0eaf1;
+	padding : 3px 30px 3px 3px;
+	float: right;
+}
+
+#question-container,.the-answer{
+	border-bottom: 1px solid #cccccc;
+	padding-bottom: 15px;
+	margin-bottom: 20px;
+}
+
+#answer-container h2{
+	border-bottom: 1px solid #cccccc;
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+}
+
+/* detail.html */
