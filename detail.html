@@ -3,6 +3,10 @@
 <head>
 	<title>Question Detail</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
 	<div id="header">
@@ -44,7 +48,7 @@
 				<div class="question">
 					<p>I am trying to loop through $vars_array['selected_ids'] array and insert the selected_id and page_id. It is inserting 3 records (as expected), but each record is getting a selected_id of 7.. i.e. the last selected value inserted.</p>
 
-					<pre>
+					<pre><code class="php">
 					$vars_array=array();
 					$vars_array['page_id']=10;
 					$vars_array['selected_ids']=array(2,3,7);
@@ -60,6 +64,7 @@
 					    $stmt -> bindParam($i++, $selected_id);
 					}
 					$stmt -> execute();
+					</code>
 					</pre>
 
 					<p>Any ideas?</p>
@@ -147,6 +152,20 @@
 
 		<div id="sidebar">
 
+			<div id="question-statistic">
+				<div id="question-statistic-parameter">
+					<p>asked</p>
+					<p>viewed</p>
+				</div>
+
+				<div id="question-statistic-value">
+					<p>10 days ago</p>
+					<p>5000 times</p>
+				</div>
+
+				<div id="question-statistic-empty">
+				</div>
+			</div>
 
 			<div id="hot-question-box">
 				<p id="title-hot">Hot Questions</p>
@@ -169,6 +188,25 @@
 					<div class="empty-hot-question-title"></div>
 				</div>
 
+			</div>
+
+			<div id="related-question-container">
+				<h3>Related</h3>
+				<div class="related-question">
+					<a class="votex" href="">20</a> <a class="titlex" href="">Twitter Bootstrap navbar-fixed-top repositioning on page</a>
+				</div>
+				<div class="related-question">
+					<a class="votex" href="">5</a> <a class="titlex" href="">Login control and custom membership provider</a>
+				</div>
+				<div class="related-question">
+					<a class="votex" href="">22</a> <a class="titlex" href="">Multiple membership providers in ASP.NET (web.config + sql)</a>
+				</div>
+				<div class="related-question">
+					<a class="votex" href="">10</a> <a class="titlex" href="">ASP.NET Custom membership issue with get custom membership user -No parameterless constructor defined for this object</a>
+				</div>
+				<div class="related-question">
+					<a class="votex" href="">9</a> <a class="titlex" href="">PCI Compliance with ASP.Net Membership Provider</a>
+				</div>
 			</div>
 
 
